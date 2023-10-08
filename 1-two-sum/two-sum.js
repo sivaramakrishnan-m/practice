@@ -10,9 +10,8 @@ var twoSum = function(nums, target) {
             if(nums[x]+nums[y]==target){
                 i = x;
                 j = y;
-                break;
+                return([i,j]);
             }
         }
     }
-    return([i,j]);
 };
