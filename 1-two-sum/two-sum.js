@@ -5,20 +5,14 @@
  */
 var twoSum = function(nums, target) {
     let i, j = 0;
-    try{
-        nums.forEach((num,index)=>{
-            nums.forEach((val,vindex)=>{
-                if(index!==vindex){
-                    if(val+num==target){
-                        i = index;
-                        j = vindex;
-                        throw new Error();
-                    }
-                }
-            })
-        });
-    }catch(e){
-        return([i,j]);
+    for(x=0; x<nums.length; x++){
+        for(y=x+1; y<nums.length; y++){
+            if(nums[x]+nums[y]==target){
+                i = x;
+                j = y;
+                break;
+            }
+        }
     }
     return([i,j]);
 };
