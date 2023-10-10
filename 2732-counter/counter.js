@@ -4,7 +4,11 @@
  */
 var createCounter = function(n) {
     
-    return ()=>n++;
+    return ()=>{
+        let a = n;
+        n = n+1;
+        return a;
+    };
 };
 
 /** 
