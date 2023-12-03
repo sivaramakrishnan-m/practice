@@ -4,14 +4,16 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let i, j = 0;
-    for(x=0; x<nums.length; x++){
-        for(y=x+1; y<nums.length; y++){
-            if(nums[x]+nums[y]==target){
-                i = x;
-                j = y;
-                return([i,j]);
-            }
+    for(i=0; i<nums.length-1; i++){
+        if(target===nums[i]+nums[i+1]){
+            return([i,i+1]);
+        }
+    }
+    for(i=0;i<nums.length;i++){
+        for(j=i+1;j<nums.length;j++){
+        if(target===nums[i]+nums[j]){
+            return([i,j]);
+        }
         }
     }
 };
